@@ -1,0 +1,29 @@
+header {
+    padding: 5.5rem 0 4rem;
+
+    .container {
+        width: 32rem;
+        margin: 0 auto;
+        text-align: center;
+
+        h1:nth-child(1) {
+            font-weight: 200;
+        }
+
+        p {
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        .container {
+            width: 20rem;
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

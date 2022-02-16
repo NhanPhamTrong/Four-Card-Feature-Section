@@ -1,0 +1,90 @@
+main {
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .column {
+            width: 30%;
+            
+            .card {
+                height: 11.25rem;
+                margin-bottom: 1.75rem;
+                padding: 2.25rem 2rem;
+                background-color: $card-background;
+                background-repeat: no-repeat;
+                background-position: bottom 2.25rem right 2rem;
+                border-radius: 5px;
+                box-shadow: 5px 5px 20px rgb(200, 200, 200);
+                position: relative;
+
+                p {
+                    margin-top: 1rem;
+                    font-size: 0.85rem;
+                }
+            }
+
+            .card:before {
+                content: "";
+                height: 5px;
+                width: 100%;
+                border-radius: 10px 10px 0 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .column:nth-child(1) {
+            .card {
+                background-image: url("../images/icon-supervisor.svg");
+            }
+
+            .card:before {
+                background-color: $supervisor-bar;
+            }
+        }
+
+        .column:nth-child(2) {
+            .card:nth-child(1) {
+                background-image: url("../images/icon-team-builder.svg");
+            }
+
+            .card:nth-child(1):before {
+                background-color: $team-builder-bar;
+            }
+
+            .card:nth-child(2) {
+                background-image: url("../images/icon-karma.svg");
+            }
+
+            .card:nth-child(2):before {
+                background-color: $karma-bar;
+            }
+        }
+
+        .column:nth-child(3) {
+            .card {
+                background-image: url("../images/icon-calculator.svg");
+            }
+
+            .card:before {
+                background-color: $calculator-bar;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    main {
+        .container {
+            flex-direction: column;
+
+            .column {
+                width: 20.5rem;
+            }
+        }
+    }
+}
